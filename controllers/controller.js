@@ -14,7 +14,7 @@ const currencyConvert = async (req,res) => {
         }
       const response = await axios.get(`https://api.apilayer.com/fixer/convert?to=${toCurrency}&from=${fromCurrency}&amount=${amount}`, {
         headers: {
-          apikey: 'd0lA9Ngr81VqZKkHnDvdiLcjvnVcNApF',
+          apikey: process.env.API_KEY,
         }
       });
       const result = response.data;
