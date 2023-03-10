@@ -12,11 +12,11 @@
     <form action="/convert" method="get" class="form">
       <div class="form__control">
         <label for="amount">Enter Amount:</label>
-        <input type="number" name="amount" id="amount" placeholder="Enter amount">
+        <input type="number" name="amount" id="amount" placeholder="Enter amount" required>
       </div>
       <div class="form__control">
         <label for="from-currency">From:</label>
-        <select name="fromCurrency" id="from-currency" class="form__selector">
+        <select name="fromCurrency" id="from-currency" class="form__selector" required>
           <% for (const [key, value] of Object.entries(currencySymbols)) { %>
             <option value=<%=`${key}`%>><%=`${key} - ${value}` %></option>
           <%} %>
@@ -24,13 +24,13 @@
       </div>
       <div class="form__control">
         <label for="to-currency">To:</label>
-        <select name="toCurrency" id="to-currency" class="form__selector">
+        <select name="toCurrency" id="to-currency" class="form__selector" required>
           <% for (const [key, value] of Object.entries(currencySymbols)) { %>
             <option value=<%=`${key}`%>><%=`${key} - ${value}` %></option>
           <%} %>
         </select>
       </div>
-      <button type="submit" class="form__btn">Convert</button>
+      <button type="submit" class="btn">Convert</button>
     </form>
   </div>
 </body>

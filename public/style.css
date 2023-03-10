@@ -5,19 +5,34 @@ body {
 }
 
 .card {
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgb(116, 116, 116);
   width: 40%;
   margin: 10rem auto;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
-  border: 1px solid #e9e9e9;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
 .card__heading {
   text-align: center;
   margin: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.card__subheading {
+  color: rgb(137, 137, 137);
+  text-align: center;
+  margin: 0;
+}
+
+.card__content {
+  text-align: center;
+}
+
+.card__boldText {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .form {
@@ -48,13 +63,12 @@ body {
 
 .form__selector {
   outline: none;
-  width: fit-content;
   border: 2px solid #ededed;
   padding: 0.6rem;
   border-radius: 4px;
 }
 
-.form__btn {
+.btn {
   align-self: center;
   width: 70%;
   padding: 0.9rem 0.3rem;
@@ -68,6 +82,17 @@ body {
   transition: all 0.4s;
 }
 
-.form__btn:hover {
+.btn:hover {
   opacity: 0.8;
+}
+.d-flex {
+  display: flex;
+  flex-flow: column;
+}
+
+.link {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

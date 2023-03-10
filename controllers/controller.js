@@ -1,4 +1,3 @@
-require('dotenv').config()
 const axios = require('axios');
 const data = require('../data/currency-symbols')
 
@@ -8,11 +7,14 @@ const getCurrencySymbols = (req, res) => {
 
 const currencyConvert = async (req,res) => {
     const { fromCurrency, toCurrency, amount } = req.query;
+    // const API_KEY = process.env.API_KEY
     try {
-        console.log(process.env.API_KEY)
+        if(fromCurrency === null || fromCurrency === null || amount === null) {
+            res.render('error')
+        }
       const response = await axios.get(`https://api.apilayer.com/fixer/convert?to=${toCurrency}&from=${fromCurrency}&amount=${amount}`, {
         headers: {
-          apikey: `${process.env.API_KEY}`,
+          apikey: 'd0lA9Ngr81VqZKkHnDvdiLcjvnVcNApF',
         }
       });
       const result = response.data;

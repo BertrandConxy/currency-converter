@@ -7,10 +7,13 @@
 </head>
 <body>
   <body>
-    <div class="card">
+    <div class="card d-flex">
       <h2 class="card__heading">Results</h2>
-        <h4>As on <%= result.date %> </h4>
-        <p><span> <%=amount %> <%=fromCurrency %></span> = <span> <%=result.result %> <%=toCurrency %></span></p>
+        <p class="card__subheading">As on <%= result.date %>:</p>
+        <p class="card__content"><span class="card__boldText"> <%=amount %> <%=fromCurrency %> = <%=result.result %> <%=toCurrency %></span></p>
+        <a href="/" class="link">
+          <button type="button" class="btn">Go Back</button>
+        </a>
     </div>
   </body>
 </body>
