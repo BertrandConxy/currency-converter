@@ -18,7 +18,7 @@
         <label for="from-currency">From:</label>
         <select name="fromCurrency" id="from-currency" class="form__selector">
           <% for (const [key, value] of Object.entries(currencySymbols)) { %>
-            <option><%=`${key} - ${value}` %></option>
+            <option value=<%=`${key}`%>><%=`${key} - ${value}` %></option>
           <%} %>
         </select>
       </div>
@@ -26,7 +26,7 @@
         <label for="to-currency">To:</label>
         <select name="toCurrency" id="to-currency" class="form__selector">
           <% for (const [key, value] of Object.entries(currencySymbols)) { %>
-            <option><%=`${key} - ${value}` %></option>
+            <option value=<%=`${key}`%>><%=`${key} - ${value}` %></option>
           <%} %>
         </select>
       </div>

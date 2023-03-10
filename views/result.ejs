@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <title>Currency Converter</title>
 </head>
 <body>
-  <h1>Result</h1>
+  <body>
+    <div class="card">
+      <h2 class="card__heading">Results</h2>
+        <h4>As on <%= result.date %> </h4>
+        <p><span> <%=amount %> <%=fromCurrency %></span> = <span> <%=result.result %> <%=toCurrency %></span></p>
+    </div>
+  </body>
 </body>
 </html>
