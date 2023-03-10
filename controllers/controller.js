@@ -7,7 +7,6 @@ const getCurrencySymbols = (req, res) => {
 
 const currencyConvert = async (req,res) => {
     const { fromCurrency, toCurrency, amount } = req.query;
-    // const API_KEY = process.env.API_KEY
     try {
         if(fromCurrency === null || fromCurrency === null || amount === null) {
             res.render('error')
